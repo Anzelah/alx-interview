@@ -4,7 +4,7 @@
 
 def makeChange(coins, total):
     """Function to return minimum coin number for change"""
-    if total == 0:
+    if total <= 0:
         return 0
 
     dp = [total + 1] * (total + 1)
