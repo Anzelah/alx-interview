@@ -3,18 +3,16 @@
 
 
 def makeChange(coins, total):
+    """Function to return minimum coin number for change"""
     if total <= 0:
         return 0
     coins.sort()
-    
-    n = len(coins)
-    idx = n - 1
-    ans = []
 
-    while (idx >= 0):
-        while (total >= coins[idx]):
-            total -= coins[idx]
-            ans.append(coins[idx])
-        idx -= 1
+    dp = [total + 1] * (total + 1)
+    dp[0] = 0
 
-    print(len(ans))
+    for i in range(1, total + 1):
+        for j in coins:
+            dp[i] = min(dp[i], 1 + dp[i - j])
+
+    return dp[total] if dp[total] != total + 1 else -1
