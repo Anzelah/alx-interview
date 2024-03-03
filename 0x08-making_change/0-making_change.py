@@ -9,7 +9,8 @@ def makeChange(coins, total):
 
     dp = [total + 1] * (total + 1)
     dp[0] = 0
-
+    
+    coins.sort(reverse=True)
     for j in coins:
         if j > total:
             break
