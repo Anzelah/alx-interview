@@ -4,9 +4,13 @@
 
 def island_perimeter(grid):
     """Function to calculate island perimeter"""
+    length = len(grid[0])
+    width = len(grid)
+
     per = 0
-    for r in range(len(grid)):
-        for c in range(len(grid[0])):
+
+    for r in range(width):
+        for c in range(length):
             if (grid[r][c] == 1):
                 if (grid[r][c - 1] == 0):
                     per += 1
