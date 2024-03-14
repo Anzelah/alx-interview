@@ -22,6 +22,9 @@ def isWinner(x, nums):
     Marias = 0
     Bens = 0
 
+    if x == 0 r nums == []:
+        return None
+
     if x is None or nums is None:
         return None
 
