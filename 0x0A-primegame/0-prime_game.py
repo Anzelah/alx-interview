@@ -25,8 +25,8 @@ def isWinner(x, nums):
     if x == 0 or nums == []:
         return None
 
-    if x is None or nums is None:
-        return None
+ #   if x is None or nums is None:
+ #       return None
 
     for i in range(x):
         number = sieve_algo(nums[i])
