@@ -25,10 +25,7 @@ def isWinner(x, nums):
     if x == 0 or nums == []:
         return None
 
- #   if x is None or nums is None:
- #       return None
-
-    for i in range(x):
+    for i in range(0, x):
         number = sieve_algo(nums[i])
         if len(number) % 2 == 0:
             Bens += 1
