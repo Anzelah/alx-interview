@@ -9,6 +9,7 @@ def pascal_triangle(n):
     Returns: an empty list if n <= 0
     You can assume n will be always an integer
     """
+    pasc = []
     if n <= 0:
         return []
     #row_0 =       [1]
@@ -20,5 +21,6 @@ def pascal_triangle(n):
     #rows start at 0
     #all numbers at both ends wll always be 1
     #n is number of rows to be printed
-    for i in range(1, n+1): # columns of each row
-        print(i)
+    for i in range(n): # columns of each row
+        pasc.append([])
+        pasc[i].append(1)
